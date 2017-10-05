@@ -6,6 +6,10 @@ body{
   margin: 0;
 }
 
+ul {
+  padding: 0;
+}
+
 header {
   font-family: "Open Sans";
   display: block;
@@ -22,6 +26,14 @@ header h1 {
 header .lead {
   font-size: 18px;
   font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.page-title {
+  display: block;
+  width: 100%;
+  height: 60px;
+  text-align: center;
 }
 
 main {
@@ -33,6 +45,12 @@ main {
   justify-content: center;
   width: 100%;
   margin: 0;
+}
+
+main h3 {
+  margin: 40px 0;
+  text-align: center;
+  color: rgb(22, 70, 124);
 }
 
 .container{
@@ -90,4 +108,34 @@ main {
 }
 .user span {
   font-weight: 600;
+}
+nav {
+  margin-top: 20px;
+  display: block;
+  position: relative;
+  height: 50px;
+  width: 70%;
+  margin: auto;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  font-size: 16px;
+  color: #fff;
+  line-height: 50px;
+  transition: ease all .2s;
+  background: rgb(22, 70, 124);
+  padding: 8px 20px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+nav ul li a:active,
+nav ul li a:hover {
+  background: rgb(81, 155, 253);
 }

@@ -30,7 +30,28 @@ mongo.connect('mongodb://localhost:27017/test', function(err, db) {
         });
     });
 
-  app.listen(3000, function() {
-    console.log('Successfully started express on port 3000!');
+    // ---------------------
+    app.get("/employed", (req, res) => {
+      items.find({ job : {$ne: null} }).toArray().then(function(items) {
+        if (err) {
+          console.warn("Error finding robots robotdb", err);
+        }
+
+        res.render("index", {users: items});
+      });
+    });
+
+    app.get("/unemployed", (req, res) => {
+      items.find({ job : null }).toArray().then(function(items) {
+        if (err) {
+          console.warn("Error finding robots robotdb", err);
+        }
+
+        res.render("index", {users: items});
+      });
+    });
+
+  app.listen(3001, function() {
+    console.log('http://localhost:3001');
   });
 });
