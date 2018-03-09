@@ -11,3 +11,10 @@ Load this data into MongoDB and rebuild the directory site. You will have to que
 
 This time, add links at the top of the page to go to a page of robots that are currently looking for work and a page of robots that are currently employed.
 
+## Get started
+
+### Terminal
+1. NPM install
+2. node server.js
+
+http://localhost:3001
